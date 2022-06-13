@@ -52,12 +52,9 @@ for (i = 0; i < tipPercent.length; i++) {
     }
   }
 }
-custom.addEventListener("input", () => {
-  console.log(this.value);
-  //   const counter = Number(this.value);
-  //   const boom = counter * 4;
-  //   console.log(boom);
-});
+
+custom.addEventListener("input", outputed);
+
 // Keeping one button active at a time
 const selection = document.querySelector("#select");
 tipPercent.forEach((button) => {
@@ -75,11 +72,12 @@ function removing() {
   tipOutputed.innerHTML = "$" + "0.00";
   totalOutput.innerHTML = "$" + "0.00";
 }
-function ouputed() {
-  const zoom = billInput.value / peopleNumber.value;
-  const sheph = (5 / 100) * zoom;
-  const result = sheph.toFixed(2);
-  console.log(result);
-  tipOutputed.textContent = "$" + result;
+function outputed() {
+  const prod = billInput.value / peopleNumber.value;
+  logging = this.value;
+  const leg = (logging / 100) * prod;
+  const lamm = leg.toFixed(2);
+  const boon = parseFloat(leg + prod).toFixed(2);
+  tipOutputed.textContent = "$" + lamm;
+  totalOutput.textContent = "$" + boon;
 }
-ouputed();
